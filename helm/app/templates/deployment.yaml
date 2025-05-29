@@ -16,7 +16,7 @@ spec:
         app: {{ .Values.appName }}
     spec:
       imagePullSecrets:
-      - name: regcred
+        {{- toYaml .Values.imagePullSecrets | nindent 8 }}
       containers:
       - name: {{ .Values.appName }}
         image: {{ .Values.image.githubID }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
