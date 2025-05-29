@@ -18,7 +18,8 @@ namespace: app
 kibanaService: "kibana-service:5601"
 esService: "es-master-service:9200"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: regcred
 nameOverride: ""
 fullnameOverride: ""
 
