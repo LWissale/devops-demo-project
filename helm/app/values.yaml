@@ -5,7 +5,6 @@
 replicaCount: 2
 
 image:
-  githubID: deepakkr35
   repository: demo-java-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
@@ -18,8 +17,7 @@ namespace: app
 kibanaService: "kibana-service:5601"
 esService: "es-master-service:9200"
 
-imagePullSecrets:
-  - name: regcred
+imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
